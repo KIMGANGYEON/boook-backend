@@ -2,6 +2,7 @@ import express from "express";
 import {
   getAuth,
   getEdit,
+  postAddCart,
   postEdit,
   postJoin,
   postLogin,
@@ -15,6 +16,7 @@ userRouter.get("/auth", auth, getAuth);
 userRouter.post("/join", postJoin);
 userRouter.post("/login", postLogin);
 userRouter.post("/logout", auth, postLogout);
+userRouter.post("/cart", auth, postAddCart);
 userRouter.route("/edituser").post(postEdit);
 
 export default userRouter;
